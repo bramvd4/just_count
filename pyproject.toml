@@ -4,12 +4,16 @@ version = "0.2.0"
 description = ""
 authors = ["AnneliesVlaar <66774020+AnneliesVlaar@users.noreply.github.com>"]
 readme = "README.md"
-packages = [{include = "just_count", from = "src"}]
+packages = [{ include = "just_count", from = "src" }]
 
 [tool.poetry.dependencies]
 python = "^3.9"
+click = "^8.1.7"
 
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+count = "just_count.count_count:main"
